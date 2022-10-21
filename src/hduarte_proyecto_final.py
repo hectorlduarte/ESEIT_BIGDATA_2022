@@ -15,8 +15,8 @@ from pathlib import Path
 from dateutil.parser import parse
 
 #root_dir = Path(".").resolve()
-root_dir = "gs://bucket_proyecto_final_01_cps/data/"
-filename = "Consolidado_datos_abiertos_2021_2022.csv"
+root_dir = "gs://bucket_proyecto_final_hd/data/"
+filename = "Consolidado_datos_abiertos_2021_2022_pro.csv"
 
 
 def leer_datos(filename):
@@ -104,7 +104,7 @@ def save_data(reporte, filename): # Guardar tabla
     out_name = 'Limpieza2_' + filename # Indicar nombre al archivo de salida
     #out_path = os.path.join(root_dir, 'data', 'processed', out_name)
     #reporte.to_csv(out_path, sep=';')
-    reporte.to_csv("gs://bucket_proyecto_final_01_cps/data/processed/" + out_name,encoding ="latin1",sep=";")
+    reporte.to_csv("gs://bucket_proyecto_final_hd/data/processed/" + out_name,encoding ="latin1",sep=";")
 
 
 
